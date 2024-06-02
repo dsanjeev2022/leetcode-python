@@ -1,0 +1,19 @@
+- dictionary 
+	- Dictionaries are used to store data values in key:value pairs.
+	- doesnt allow duplicates with same key
+	- keys must be non mutable
+		- Str, int, tuple
+	- DefaultDict
+		- A function returning the default value for the dictionary defined.
+		
+- Tuple
+	- A tuple is a collection which is ordered and unchangeable
+	- allow duplicates
+	
+- Sets
+	- A set is a collection which is unordered, and unindexed.
+	- Sets are written with curly brackets.
+	- do not allow duplicates
+	
+- Lists
+	- List items are ordered, changeable, and allow duplicate values, indexale
