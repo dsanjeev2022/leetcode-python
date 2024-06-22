@@ -40,4 +40,50 @@ def longestConsecutive(self, nums: List[int]) -> int:
             longest = max(length, longest)
         return lomgest
         
+#Valid Parenthesis
+def isValid(self, s: str) -> bool:
+    stack = []
+    closeToOpen = {")":"(" , "{":"}", "[":"]"  }
+    
+    for c in s:
+        if c in closeToOpen:
+            if stack and (stack[-1] == closeToOpen[c]):
+                stack.pop()
+            else:
+                return False
+        else:
+            stack.append(c)
+    
+    if stack:
+        return False
+    else:
+        return True
+        
  
+class MinStack:
+
+    def __init__(self):
+        self.stack = []
+        self.minStack = []
+        
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        if self.minStack:
+            valToCompare = self.minStack[-1]
+        else:
+            valToCompare = val
+            
+        val = min(val, valToCompare)
+        self.minStack.append(val)
+        
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
+        
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        return self.MinStackstack[-1]
